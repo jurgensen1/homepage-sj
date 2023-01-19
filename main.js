@@ -1,10 +1,9 @@
 const menuIconDivBars = document.getElementById("bars");
-const menuIconDivsSocialMediaMenu = document.getElementById("social-media-menu");
-
 const menuIconBars = document.getElementById("nav-bars-icon");
-const menuIconComositeMenu = document.getElementById("composite-menu-icon");
-
 const menuIconAngleDownL = document.getElementById("angle-down-l");
+
+const menuIconDivsSocialMediaMenu = document.getElementById("social-media-menu");
+const menuIconComositeMenu = document.getElementById("composite-menu-icon");
 const menuIconAngleDownR = document.getElementById("angle-down-r");
 
 const mobileLeftNav = document.getElementById("mobile-drop-down-left");
@@ -25,16 +24,38 @@ const heightNavBar = document.getElementById("navbar").scrollHeight;
 const heightLeftDropDownMenu = document.getElementById("mobile-drop-down-left").scrollHeight;
 const heightRightDropDownMenu = document.getElementById("mobile-drop-down-right").scrollHeight;
 
-console.log(heightOfDocElement);
-console.log(heightOfDocElement - heightHero);
-console.log(heightOfDocElement - heightHero - 100);
-// const aboutNav = document.getElementById("about-link");
-// const bowlsNav = document.getElementById("bowls-link");
-// const lidsNav = document.getElementById("lids-link");
-// const otherNav = document.getElementById("other-link");
-// const headerNav = document.getElementById("header");
+function resestMobile() {
+    // console.log(innerWidth);
+    if (window.innerWidth > 850) {
+        mobileLeftNav.style.display = "none";
+        mobileRightNav.style.display = "none";
 
-// Navagaion 
+        menuIconDivBars.style.display = "none";
+        menuIconDivsSocialMediaMenu.style.display = "none";
+
+        menuIconAngleDownL.style.display = "none";
+        menuIconAngleDownR.style.display = "none";
+
+        topCover.style.display = "none";
+        bottomCover.style.display = "none";
+    } else {
+        menuIconDivBars.style.display = "flex";
+        menuIconDivsSocialMediaMenu.style.display = "flex";
+
+        mobileLeftNav.style.display = "none";
+        mobileRightNav.style.display = "none";
+        menuIconBars.style.display = "inline";
+        menuIconComositeMenu.style.display = "inline";
+        menuIconAngleDownL.style.display = "none";
+        menuIconAngleDownR.style.display = "none";
+        topCover.style.display = "none";
+        bottomCover.style.display = "none";
+    }
+}
+setTimeout(() => {
+    window.onresize = resestMobile;
+  }, "100")
+  
 menuIconDivBars.addEventListener('click', function () {
     if (mobileLeftNav.style.display == "none") {
         mobileLeftNav.style.display = "flex";
@@ -44,7 +65,7 @@ menuIconDivBars.addEventListener('click', function () {
         topCover.style.display = "block";
         bottomCover.style.display = "block";
         bottomCover.style.top = "" + (heightHero + heightNavBar + 300) + "px";
-        bottomCover.style.height = "" +  (heightOfDocElement - heightHero - heightNavBar - 300) + "px";
+        bottomCover.style.height = "" + (heightOfDocElement - heightHero - heightNavBar - 300) + "px";
     } else {
         mobileLeftNav.style.display = "none";
         menuIconComositeMenu.style.display = "inline";
@@ -63,7 +84,7 @@ menuIconDivsSocialMediaMenu.addEventListener('click', function () {
         topCover.style.display = "block";
         bottomCover.style.display = "block";
         bottomCover.style.top = "" + (heightHero + heightNavBar + 400) + "px";
-        bottomCover.style.height = "" +  (heightOfDocElement - heightHero - heightNavBar - 400) + "px";
+        bottomCover.style.height = "" + (heightOfDocElement - heightHero - heightNavBar - 400) + "px";
     } else {
         mobileRightNav.style.display = "none";
         menuIconComositeMenu.style.display = "inline";
@@ -74,20 +95,26 @@ menuIconDivsSocialMediaMenu.addEventListener('click', function () {
     }
 })
 topCover.addEventListener('click', function () {
-        mobileLeftNav.style.display = "none";
-        menuIconDivsSocialMediaMenu.style.display = "flex";
-        menuIconAngleDownL.style.display = "none";
-        menuIconBars.style.display = "inline";
-        topCover.style.display = "none";
-        bottomCover.style.display = "none";
+    mobileLeftNav.style.display = "none";
+    mobileRightNav.style.display = "none";
+    menuIconDivsSocialMediaMenu.style.display = "flex";
+    menuIconAngleDownL.style.display = "none";
+    menuIconAngleDownR.style.display = "none";
+    menuIconBars.style.display = "inline";
+    topCover.style.display = "none";
+    bottomCover.style.display = "none";
+    menuIconComositeMenu.style.display = "inline";
 })
 bottomCover.addEventListener('click', function () {
-        mobileLeftNav.style.display = "none";
-        menuIconDivsSocialMediaMenu.style.display = "flex";
-        menuIconAngleDownL.style.display = "none";
-        menuIconBars.style.display = "inline";
-        topCover.style.display = "none";
-        bottomCover.style.display = "none";
+    mobileLeftNav.style.display = "none";
+    mobileRightNav.style.display = "none";
+    menuIconDivsSocialMediaMenu.style.display = "flex";
+    menuIconAngleDownL.style.display = "none";
+    menuIconAngleDownR.style.display = "none";
+    menuIconBars.style.display = "inline";
+    topCover.style.display = "none";
+    bottomCover.style.display = "none";
+    menuIconComositeMenu.style.display = "inline";
 })
 
 projectsLink.addEventListener('click', function () {
@@ -117,6 +144,7 @@ bioLink.addEventListener('click', function () {
     topCover.style.display = "none";
     bottomCover.style.display = "none";
 })
+
 // aboutNav.addEventListener('click', function () {
 //     if (columnNav.style.top == "-1000px") {
 //         columnNav.style.top = "var(--height-of-navbar)";

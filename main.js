@@ -241,7 +241,7 @@ function logX() {
     console.log(projects.scrollLeft);
     if (window.innerWidth >= window.innerHeight) {
         if (projects.scrollLeft < Math.round((window.innerHeight - 100) / 2)) {
-            project1.scrollIntoView({behavior: "smooth", inline: "center"});
+            project1.scrollIntoView({behavior: "smooth", block: "end + 100", inline: "center"});
         } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 3)) + (window.innerHeight)) {
             project2.scrollIntoView({behavior: "smooth", block: "end", inline: "center"});
         } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 2)) {

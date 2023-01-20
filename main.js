@@ -17,10 +17,29 @@ const writingLink = document.getElementById("writing-link");
 const writingElement = document.getElementById("writing");
 const bioLink = document.getElementById("bio-link");
 const bioElement = document.getElementById("bio");
+const projects = document.getElementById("projects");
+const projectsWrapper = document.getElementById("projects-wrapper");
+
+const project1 = document.getElementById("project-1");
+const project2 = document.getElementById("project-2");
+const project3 = document.getElementById("project-3");
+const project4 = document.getElementById("project-4");
+const project5 = document.getElementById("project-5");
+
+const writing1 = document.getElementById("writing-1");
+const writing2 = document.getElementById("writing-2");
+const writing3 = document.getElementById("writing-3");
+const writing4 = document.getElementById("writing-4");
+const writing5 = document.getElementById("writing-5");
+
+
+const navBar = document.getElementById("navbar");
+const fillerNavBar = document.getElementById("filler");
 
 const heightOfDocElement = document.documentElement.scrollHeight;
 const heightHero = document.getElementById("hero-image-div").scrollHeight;
 const heightNavBar = document.getElementById("navbar").scrollHeight;
+
 const heightLeftDropDownMenu = document.getElementById("mobile-drop-down-left").scrollHeight;
 const heightRightDropDownMenu = document.getElementById("mobile-drop-down-right").scrollHeight;
 
@@ -54,8 +73,8 @@ function resestMobile() {
 }
 setTimeout(() => {
     window.onresize = resestMobile;
-  }, "100")
-  
+  }, 250);
+
 menuIconDivBars.addEventListener('click', function () {
     if (mobileLeftNav.style.display == "none") {
         mobileLeftNav.style.display = "flex";
@@ -145,9 +164,29 @@ bioLink.addEventListener('click', function () {
     bottomCover.style.display = "none";
 })
 
+setInterval(() => {
+    if (window.scrollY > (heightHero - 15)) {
+        navBar.style.position = "fixed";
+        mobileLeftNav.style.position = "fixed";
+        mobileLeftNav.style.top = "100px";
+        mobileRightNav.style.position = "fixed";
+        mobileRightNav.style.top = "100px";
+        topCover.style.display = "none";
+        fillerNavBar.style.display = "block";
+    } else {
+        navBar.style.position = "relative";
+        mobileLeftNav.style.position = "absolute";
+        mobileLeftNav.style.removeProperty('top');
+        mobileRightNav.style.position = "absolute";
+        mobileRightNav.style.removeProperty('top');
+        fillerNavBar.style.display = "none";
+
+    }
+}, 150);
 // aboutNav.addEventListener('click', function () {
 //     if (columnNav.style.top == "-1000px") {
 //         columnNav.style.top = "var(--height-of-navbar)";
+
 //         columnNav.style.pointerEvents = 'none';
 //         menuIconDiv.style.backgroundColor = "var(--background)";
 //         menuIcon.style.color = "var(--primary-color)";
@@ -198,4 +237,28 @@ bioLink.addEventListener('click', function () {
 //     }
 // })
 
-
+function logX() {
+    console.log(projects.scrollLeft);
+    if (window.innerWidth >= window.innerHeight) {
+        if (projects.scrollLeft < Math.round((window.innerHeight - 100) / 2)) {
+            project1.scrollIntoView({behavior: "smooth", block: "end", inline: "center"});
+        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 3)) + (window.innerHeight)) {
+            project2.scrollIntoView({behavior: "smooth", block: "end", inline: "center"});
+        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 2)) {
+            project3.scrollIntoView({behavior: "smooth", block: "end", inline: "center"});
+        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 3)) {
+            project4.scrollIntoView({behavior: "smooth", block: "end", inline: "center"});
+        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 4)) {
+            project5.scrollIntoView({behavior: "smooth", block: "end", inline: "center"});
+        }   
+    } else {
+        project3.scrollIntoView();
+    }
+}
+setInterval(() => {
+    projects.onscroll = logX;
+  }, 1000);
+// projects.onscroll = function() {
+    // console.log("projects has scrolled");
+   
+// };

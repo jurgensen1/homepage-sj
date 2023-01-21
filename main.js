@@ -257,22 +257,22 @@ setInterval(() => {
 //         }
 //     }, 250)
 // }
-projects.addEventListener("scrollend", (e) => {
-    console.log(projects.scrollLeft);
-    if (window.innerWidth >= window.innerHeight) {
-        if (projects.scrollLeft < Math.round((window.innerHeight - 100) / 2)) {
-            project1.scrollIntoView({behavior: "smooth", inline: "center"});
-        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight)) {
-            project2.scrollIntoView({behavior: "smooth", inline: "center"});
-        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 2)) {
-            project3.scrollIntoView({behavior: "smooth", inline: "center"});
-        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 3)) {
-            project4.scrollIntoView({behavior: "smooth", inline: "center"});
-        } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 4)) {
-            project5.scrollIntoView({behavior: "smooth", inline: "center"});
-        }   
-    } else {
-        project3.scrollIntoView();
-    }
-});
+// projects.addEventListener("scrollend", (e) => {
+//     console.log(projects.scrollLeft);
+//     if (window.innerWidth >= window.innerHeight) {
+//         if (projects.scrollLeft < Math.round((window.innerHeight - 100) / 2)) {
+//             project1.scrollIntoView({behavior: "auto", inline: "center"});
+//         } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight)) {
+//             project2.scrollIntoView({behavior: "auto", inline: "center"});
+//         } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 2)) {
+//             project3.scrollIntoView({behavior: "auto", inline: "center"});
+//         } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 3)) {
+//             project4.scrollIntoView({behavior: "auto", inline: "center"});
+//         } else if (projects.scrollLeft < (Math.round((window.innerHeight - 100) / 2)) + (window.innerHeight * 4)) {
+//             project5.scrollIntoView({behavior: "auto", inline: "center"});
+//         }   
+//     } else {
+//         project3.scrollIntoView();
+//     }
+// });
 

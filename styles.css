@@ -403,6 +403,10 @@ main {
     position: relative;
     overflow-y: scroll;
     z-index: 1;
+    /* scroll-snap-stop: always; */
+    /* scroll-snap-align: center; */
+    scroll-snap-type: x mandatory;
+
 }
 .horizontal-scroll-window-wrapper{
     display: flex;
@@ -410,6 +414,7 @@ main {
     height: 100vw;
     width: 500vw;
     z-index: 2;
+    scroll-snap-type: x mandatory;
 }
 .project-tile {
     display: flex;
@@ -419,6 +424,8 @@ main {
     height: 100vw;
     width: 100vw;
     box-sizing: border-box;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 .project-tile h3 {

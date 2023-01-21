@@ -432,7 +432,7 @@ main {
     box-sizing: border-box;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    font-size: 12px;
+    /* font-size: 12px; */
 }
 
 .project-tile h3 {
@@ -441,6 +441,13 @@ main {
     /* margin: 5% auto; */
     text-align: left;
     /* font-size: 3px; */
+}
+#project-2 {
+    background-image: url("img/TriangleBackdrop.jpg");
+    overflow: hidden;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
 }
 @media(min-width: 851px) {
     .mobile-menu-icon {

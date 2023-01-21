@@ -406,10 +406,11 @@ main {
     position: relative;
     overflow-x: scroll;
     overflow-y: visible;
+    scroll-margin: 50vw;
+    scroll-behavior: smooth;
     /* scroll-snap-stop: always; */
     /* scroll-snap-align: center; */
     scroll-snap-type: x mandatory;
-
 }
 .horizontal-scroll-window-wrapper{
     display: flex;
@@ -417,14 +418,14 @@ main {
     height: 100vw;
     /* height: calc(100vw - 150px); */
     margin: 0;
-    width: 500vw;
-    scroll-snap-type: x mandatory;
+    width: 400vw;
+    /* scroll-snap-type: x proximity; */
 }
 .project-tile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid;
+
     height: 100vw;
     /* height: calc(100vw - 150px); */
     margin: 0;
@@ -442,7 +443,28 @@ main {
     text-align: left;
     /* font-size: 3px; */
 }
+#project-1 {
+    overflow: hidden;
+    background-image: url("img/SlopeBackdrop.jpg");
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+}
 #project-2 {
+    background-image: url("img/TriangleBackdrop.jpg");
+    overflow: hidden;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+}
+#project-3 {
+    background-image: url("img/TriangleBackdrop.jpg");
+    overflow: hidden;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+}
+#project-4 {
     background-image: url("img/TriangleBackdrop.jpg");
     overflow: hidden;
     z-index: 1;
@@ -490,7 +512,7 @@ main {
         margin: 0 0;
         padding: 0 0;
         height: 50vh;
-        width: calc(500vh);
+        width: 400vh;
         /* width: calc(550vh - 45vw); */
         background-color: white;
     }

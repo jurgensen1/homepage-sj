@@ -397,7 +397,9 @@ main {
 .horizontal-scroll-window{
     display: flex;
     flex-direction: column;
-    height: 100vw;
+    /* height: 100vw; */
+    height: calc(100vw - 150px);
+
     width: 100vw;
     background-color: white;
     position: relative;
@@ -411,7 +413,9 @@ main {
 .horizontal-scroll-window-wrapper{
     display: flex;
     flex-direction: row;
-    height: 100vw;
+    /* height: 100vw; */
+    height: calc(100vw - 150px);
+
     width: 500vw;
     z-index: 2;
     scroll-snap-type: x mandatory;
@@ -421,7 +425,9 @@ main {
     flex-direction: column;
     align-items: center;
     border: 1px solid;
-    height: 100vw;
+    /* height: 100vw; */
+    height: calc(100vw - 150px);
+
     width: 100vw;
     box-sizing: border-box;
     scroll-snap-align: center;

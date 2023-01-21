@@ -403,8 +403,8 @@ main {
     width: 100vw;
     background-color: white;
     position: relative;
-    overflow-y: scroll;
-    z-index: 1;
+    overflow-x: scroll;
+    overflow-y: visible;
     /* scroll-snap-stop: always; */
     /* scroll-snap-align: center; */
     scroll-snap-type: x mandatory;
@@ -417,7 +417,6 @@ main {
     /* height: calc(100vw - 150px); */
 
     width: 500vw;
-    z-index: 2;
     scroll-snap-type: x mandatory;
 }
 .project-tile {
@@ -437,7 +436,7 @@ main {
 .project-tile h3 {
     display: block;
     width: 100%;
-    margin: 5% auto;
+    /* margin: 5% auto; */
     text-align: left;
 }
 @media(min-width: 851px) {

@@ -75,8 +75,12 @@ setTimeout(() => {
     window.onresize = resestMobile;
   }, 250);
 
+function stopEvent(event) {
+    event.stopPropgation();
+}
+document.getElementById("bars".stopPropgation);
 menuIconDivBars.addEventListener('click', function () {
-    if (mobileLeftNav.style.display == "none") {
+    if (mobileLeftNav.style.display === "none") {
         mobileLeftNav.style.display = "flex";
         menuIconComositeMenu.style.display = "none";
         menuIconAngleDownL.style.display = "inline";

@@ -1,7 +1,7 @@
 :root {
     --primary-color: rgb(0, 102, 139);
     --secondary-color: rgb(105, 185, 214);
-    --tertiary-color-one: rgb(255, 129, 129);
+    --tertiary-color-one: rgb(171, 74, 74);
     --tertiary-color-two: rgb(158, 91, 28);
 
     --hover-primary-color: rgba(74, 105, 134, 0.35);
@@ -88,7 +88,48 @@ a {
     background: var(--primary-color);
     padding: 0 20px;
 }
-
+.page-intro {
+    background-color: rgba(0, 0, 0, 0.333);
+    max-width: 800px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+    /* padding-bottom: 15px; */
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    height: fit-content;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+#drop-down-btn{
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+    height: 15px;
+    width: 100%;
+    color: white;
+}
+#into-p-1 {
+    display: static;
+}
+#into-p-2 {
+    display: none;
+}
+#into-p-3 {
+    display: none;
+}
+.read-more-btn {
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+    /* background-color: var(--primary-color); */
+    background-color: var(--tertiary-color-one);
+    color: white;
+    display: none;
+}
 /* #navbar ul {
         display: flex;
         width: 100%;
@@ -435,6 +476,7 @@ main {
     scroll-snap-align: center;
     scroll-snap-stop: always;
     /* font-size: 12px; */
+
 }
 
 .project-tile h3 {
@@ -456,22 +498,7 @@ main {
     width: 60px;
     border-radius: 30px;
 }
-.dots-nav {
-    margin: 10px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    background-color: white;
-}
-.dots {
-    height: 16px;
-    width: 16px;
-    border-radius: 8px;
-    margin: 0 2px;
-    background-color: #E93F5B;
-}
+
 #project-1 {
     overflow: hidden;
     background-image: url("img/SlopeBackdrop.jpg");
@@ -529,6 +556,65 @@ main {
     z-index: 1;
     background-position: center;
     background-size: cover;
+}
+
+/* #silder-wrapper{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#hero {
+    margin-top: 130px;
+} */
+
+/********  Slider ********/
+.slide-viewer {
+    overflow: hidden;
+    height: 40vw;
+    width: 100%;
+}
+.slide-group {
+    height: 100%;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    position: relative;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide:first-child {
+    display: block;
+}
+.slide-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.tile-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.slide-btn{
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    margin: 5px;
+}
+.active {
+    background-color: var(--primary-color);
+
 }
 @media(min-width: 851px) {
     .mobile-menu-icon {

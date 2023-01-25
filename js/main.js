@@ -11,6 +11,12 @@ const mobileRightNav = document.getElementById("mobile-drop-down-right");
 const topCover = document.getElementById("top-cover");
 const bottomCover = document.getElementById("bottom-cover");
 
+// const pageInto = document.getElementById("page-intro");
+// const dropDivDownBtn = document.getElementById("drop-down-btn");
+// const dropBtnD = document.getElementById("drop-down-btn-d");
+// const dropBtnU = document.getElementById("drop-down-btn-u");
+
+
 const projectsLink = document.getElementById("projects-link");
 const projectsElement = document.getElementById("projects");
 const writingLink = document.getElementById("writing-link");
@@ -31,7 +37,6 @@ const writing2 = document.getElementById("writing-2");
 const writing3 = document.getElementById("writing-3");
 const writing4 = document.getElementById("writing-4");
 const writing5 = document.getElementById("writing-5");
-
 
 const navBar = document.getElementById("navbar");
 const fillerNavBar = document.getElementById("filler");
@@ -75,12 +80,23 @@ setTimeout(() => {
     window.onresize = resestMobile;
   }, 250);
 
-function stopEvent(event) {
-    event.stopPropgation();
-}
-document.getElementById("bars".stopPropgation);
+// dropDivDownBtn.addEventListener('click', function () {
+//     if (dropBtnD.style.display === "none") {
+//         dropBtnD.style.display = "inline";
+//         dropBtnU.style.display = "none";
+//         pageInto.style.height = "90px";
+//         pageInto.style.overflow = "hidden";
+
+//     } else {
+//         dropBtnD.style.display = "none";
+//         dropBtnU.style.display = "inline";
+//         pageInto.style.height = "fit-content";
+//     }
+// })
+
 menuIconDivBars.addEventListener('click', function () {
     if (mobileLeftNav.style.display === "none") {
+        menuIconDivsSocialMediaMenu.style.display = "none";
         mobileLeftNav.style.display = "flex";
         menuIconComositeMenu.style.display = "none";
         menuIconAngleDownL.style.display = "inline";
@@ -90,6 +106,7 @@ menuIconDivBars.addEventListener('click', function () {
         bottomCover.style.top = "" + (heightHero + heightNavBar + 300) + "px";
         bottomCover.style.height = "" + (heightOfDocElement - heightHero - heightNavBar - 300) + "px";
     } else {
+        menuIconDivsSocialMediaMenu.style.display = "flex";
         mobileLeftNav.style.display = "none";
         menuIconComositeMenu.style.display = "inline";
         menuIconAngleDownL.style.display = "none";
@@ -100,6 +117,7 @@ menuIconDivBars.addEventListener('click', function () {
 })
 menuIconDivsSocialMediaMenu.addEventListener('click', function () {
     if (mobileRightNav.style.display == "none") {
+        menuIconDivBars.style.display = "none";
         mobileRightNav.style.display = "flex";
         menuIconComositeMenu.style.display = "none";
         menuIconAngleDownR.style.display = "inline";
@@ -109,6 +127,7 @@ menuIconDivsSocialMediaMenu.addEventListener('click', function () {
         bottomCover.style.top = "" + (heightHero + heightNavBar + 400) + "px";
         bottomCover.style.height = "" + (heightOfDocElement - heightHero - heightNavBar - 400) + "px";
     } else {
+        menuIconDivBars.style.display = "flex";
         mobileRightNav.style.display = "none";
         menuIconComositeMenu.style.display = "inline";
         menuIconAngleDownR.style.display = "none";
@@ -187,6 +206,7 @@ setInterval(() => {
 
     }
 }, 150);
+
 // aboutNav.addEventListener('click', function () {
 //     if (columnNav.style.top == "-1000px") {
 //         columnNav.style.top = "var(--height-of-navbar)";

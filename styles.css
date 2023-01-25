@@ -1,7 +1,7 @@
 :root {
     --primary-color: rgb(0, 102, 139);
     --secondary-color: rgb(105, 185, 214);
-    --tertiary-color-one: rgb(222, 140, 118);
+    --tertiary-color-one: rgba(212, 155, 97, 0.807);
     --tertiary-color-two: rgb(158, 91, 28);
 
     --hover-primary-color: rgba(74, 105, 134, 0.35);
@@ -218,7 +218,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(83, 12, 12, 0.345), rgba(255, 255, 255, 0.554));
+    background: linear-gradient(rgba(255, 255, 255, 0.345), rgba(0, 0, 0, 0.595));
     /* background: rgba(243, 121, 121, 0.22); */
 
 }
@@ -468,9 +468,10 @@ main {
     box-sizing: border-box;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    background: linear-gradient(var(--tertiary-color-one) 20%, var(--primary-color) 120%);
+    background: linear-gradient(90deg, rgba(128, 128, 128, 0.75) -80%, white 10%, white, rgba(128, 128, 128, 0.75) 180%);
+    /* background: linear-gradient(var(--tertiary-color-one) 20%, rgba(81, 59, 37, 0.807) 120%); */
     /* background: linear-gradient(#e66465, var(--primary-color)); */
-    color:white;
+    color:black;
     /* background: linear-gradient(#e66465, #9198e5); */
 }
 

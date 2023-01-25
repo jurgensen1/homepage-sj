@@ -47,7 +47,7 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 #filler {
     width: 100%;
@@ -453,6 +453,7 @@ main {
     /* scroll-snap-stop: always; */
     /* scroll-snap-align: center; */
     scroll-snap-type: x mandatory;
+    scroll-bar: none;
 }
 .horizontal-scroll-window-wrapper{
     display: flex;
@@ -490,14 +491,7 @@ main {
     display: flex;
     flex-direction: row;
 }
-.slide-number {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    border-radius: 30px;
-}
+
 
 #project-1 {
     overflow: hidden;
@@ -605,16 +599,41 @@ main {
     justify-content: center;
 }
 .slide-btn{
-    height: 5px;
-    width: 5px;
-    border-radius: 5px;
+    height: 4px;
+    width: 4px;
+    border-radius: 8px;
     background-color: white;
-    border: 3px solid var(--primary-color);
-    margin: 5px;
+    border: 1px solid var(--primary-color);
+    margin: 3px;
 }
+
 .active {
     background-color: var(--primary-color);
 
+}
+
+.slide-number {
+    position: absolute;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    left: 0;
+    z-index: 2;
+    font-size: 15px;
+    text-align: center;
+}
+
+.slide-number p{
+    background-color: rgba(84, 84, 84, 0.618);
+    color: white;
+    height: 20px;
+    width: fit-content;
+    padding: 2px 6px;
+    margin: 10px;
+    border-radius: 20px;
 }
 @media(min-width: 851px) {
     .mobile-menu-icon {
@@ -664,6 +683,11 @@ main {
     .project-tile {
         height: calc(100vh - 150px);
         width: 100vh;
+    }
+    .slide-number {
+        width: 100vh;
+        left: calc(50vw  - 50vh);
+        z-index: 2;
     }
     
   }

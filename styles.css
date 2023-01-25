@@ -440,7 +440,6 @@ main {
     display: flex;
     flex-direction: column;
     height: 100vw;
-    /* height: calc(100vw - 150px); */
     margin: 0;
 
     width: 100vw;
@@ -450,42 +449,31 @@ main {
     overflow-y: visible;
     scroll-margin: 50vw;
     scroll-behavior: smooth;
-    /* scroll-snap-stop: always; */
-    /* scroll-snap-align: center; */
     scroll-snap-type: x mandatory;
-    scroll-bar: none;
 }
 .horizontal-scroll-window-wrapper{
     display: flex;
     flex-direction: row;
     height: 100vw;
-    /* height: calc(100vw - 150px); */
     margin: 0;
     width: 400vw;
-    /* scroll-snap-type: x proximity; */
 }
 .project-tile {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     height: 100vw;
-    /* height: calc(100vw - 150px); */
     margin: 0;
     width: 100vw;
     box-sizing: border-box;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    /* font-size: 12px; */
-
 }
 
 .project-tile h3 {
     display: block;
     width: 100%;
-    /* margin: 5% auto; */
     text-align: left;
-    /* font-size: 3px; */
 }
 .project-meta {
     display: flex;
@@ -631,7 +619,7 @@ main {
     color: white;
     height: 20px;
     width: fit-content;
-    padding: 2px 6px;
+    padding: 4px 6px 2px 6px;
     margin: 10px;
     border-radius: 20px;
 }

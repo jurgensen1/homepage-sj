@@ -6,7 +6,7 @@ $('.tile-slider').each(function () {              // For every slider
     var $slides = $this.find('.project-tile');       // Create jQuery object to hold all slides
     var $scollWindow = $this.find('.horizontal-scroll-window');       // Create jQuery object to hold all slides
     var $slideNumber = $this.find('.slide-number-text');       // Create jQuery object to hold all slides
-    var buttonArray = [];                    // Create array to hold navigation buttons
+    var $buttonArray = [];                    // Create array to hold navigation buttons
     var currentIndex = 0;                     // Hold index number of the current slide
     var timeout;                          // Sets gap between auto-sliding
     window.addEventListener("load", function () {
@@ -17,14 +17,14 @@ $('.tile-slider').each(function () {              // For every slider
     $.each($slides, function (index) {
         // Create a button element for the button
         var $button = $('<div class="slide-btn"></div>');
-        $.each(buttonArray, function (i) {
+        $.each($buttonArray, function (i) {
             if (i === currentIndex) {
-                buttonArray[i].addClass('active');
+                $buttonArray[i].addClass('active');
             }
         });
 
-        $button.appendTo('.tile-buttons');   // Add to the buttons holder
-        buttonArray.push($button);       // Add it to the button array
+        $button.appendTo($this.find('.tile-buttons'));   // Add to the buttons holder
+        $buttonArray.push($button);       // Add it to the button array
     });
     let width = $group.width();
     // console.log(width);
@@ -32,9 +32,7 @@ $('.tile-slider').each(function () {              // For every slider
     // advance();                          // Script is set up, advance() to move it
     $scollWindow.on("scroll", function (event) { 
         let tmp = currentIndex;
-        console.log($scollWindow.scrollLeft());
         let tileWidth = Math.round(width / $slides.length);
-        console.log(tileWidth);
         for (let i = 0; i < ($slides.length); i++) {
             if ($scollWindow.scrollLeft() < (Math.round(tileWidth / 2) + (tileWidth * i))) {
                 currentIndex = i;
@@ -42,12 +40,9 @@ $('.tile-slider').each(function () {              // For every slider
                 break;
             }
         }
-        // window width / length of array
-        // if scrollX is <<<<< etc.
-        //      set the scoll to the respective element. 
-        // update current index
-        buttonArray[tmp].removeClass('active');
-        buttonArray[currentIndex].addClass('active');
-    });
+        $buttonArray[tmp].removeClass('active');
+        $buttonArray[currentIndex].addClass('active');
 
+    });
+    
 });

@@ -218,9 +218,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.345), rgba(0, 0, 0, 0.595));
-    /* background: rgba(243, 121, 121, 0.22); */
-
+    background: linear-gradient(rgba(252, 223, 183, 0), rgba(0, 0, 0, 0.61));
 }
 
 #profile-image-h1 {
@@ -484,7 +482,14 @@ main {
     display: flex;
     flex-direction: row;
 }
-
+#bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bio-class {
+    max-width: 900px;
+}
 
 /* #project-1 {
     overflow: hidden;

@@ -20,7 +20,7 @@
 }
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -28,7 +28,10 @@ body {
     width: 100%;
     font-size: 20px;
 }
-
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+}
 a {
     text-decoration: none;
     color: var(--primary-color);
@@ -624,7 +627,7 @@ main {
     text-align: center;
 }
 
-.slide-number p{
+.slide-number div{
     background-color: rgba(84, 84, 84, 0.618);
     color: white;
     height: 20px;
